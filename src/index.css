@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Ma+Shan+Zheng&display=swap');
+
+@theme {
+  --font-cute: "ZCOOL KuaiLe", cursive;
+  --font-hand: "Ma+Shan+Zheng", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f0fdf4;
+  font-family: var(--font-cute);
+  touch-action: none;
+}
+
+canvas {
+  display: block;
+  touch-action: none;
+}
+
+.healing-gradient {
+  background: linear-gradient(to bottom, #dcfce7, #f0fdf4);
+}
+
+.start-screen {
+  background: radial-gradient(circle at center, #f0fdf4 0%, #bbf7d0 100%);
+}
+
+.win-screen {
+  background: radial-gradient(circle at center, #f0fdf4 0%, #86efac 100%);
+}
+
+.btn-green {
+  background-color: #22c55e;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-size: 20px;
+  box-shadow: 0 4px 0 #16a34a;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.btn-green:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #16a34a;
+}
+
+.text-shadow-green {
+  text-shadow: 2px 2px 0px rgba(34, 197, 94, 0.2);
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.sway {
+  animation: sway 3s ease-in-out infinite;
+}
